@@ -1,0 +1,112 @@
+# -*- encoding: utf8 -*-
+
+"""	Solution of exercises of the GEOMAR python workshop
+	'Einfuehrung in PYTHON'
+	Solutions by Bernd Kassler www.c3is.de
+	bernd@gephysik.uni-kiel.de
+	start 13. JAN 201
+"""
+
+#import numpy as np
+#import h5py
+#from scipy import signal as sgl
+#import scipy.io as sio
+#import sympy as smb
+#import matplotlib.pyplot as plt
+#import math
+#import os
+import sys
+#import openpyxl
+#import time
+#import xlrd
+#import xlwt
+# from netCDF4 import  Dataset
+#import mpltools 
+#import obspy
+
+class Clear:
+	'''	Use "-clear" to clear the screen, i.e:
+		>>> -clear
+		Or call it as a function:
+		>>> clear()
+		Or if you're on a shell, you can also type:
+		>>> clear
+		This file can be called as a regular program, also.
+		cf. https://gist.github.com/jmendeth/3130325
+	'''
+	def __call__(self):
+		import os
+		if os.name=='linux': os.system('clear')
+		else: print('\n'*120)
+		def __neg__(self): self()
+		def __repr__(self):
+			self();return ''
+
+class Gen :
+	"""Useful constants and functions
+		function_one (val)		does something
+	"""
+	#math. constants in CAPITALS
+	NIL=None				# NULL string 0x0
+	MAXINT=sys.maxsize		# a big Integer
+	YNF=1.e100				# a big number
+	ZERO=1/YNF				# a small number
+	# ++++++++++++++++++++++++++++++++++++++++
+	def __init__(self):
+		pass
+		#end Attribute Nutz++++++++++++++++++++++++++++
+	@staticmethod
+	def function_one(	val,		# a variable as input
+												):	
+		"""does something with variable val
+		"""
+		x=val
+		return x
+		# end function_one ++++++++++++++++++++++++++++++++
+	# defining some functions as static:
+	function_one= staticmethod(function_one)
+	#end class Nutz #####################################
+
+###############################################
+# TEST environment (main program)
+#
+if  __name__ =='__main__':
+	print('START test run    _____________________________________________________________________________')
+	print()
+	
+	# 	1.	NUMBERS
+	print('NUMBERS')
+	print(type(1))		# realize that the type is of class 'int'
+	print(type(1.0))	# class 'float
+	#	1.1 Exercises.
+	print(5**5**5)		# a very big int number
+#	print(5.**5.**5.) 	# error: "unhandled OverflowError (34, 'Numerical result out of range')“	
+						# the pgm stops here therefore it's commented
+	print(5*5%10)		# '%' is a modulo perator! not a comment like in Matlab!
+
+	# testing the differences between int and float
+	a=2*300+1
+	b=2.*300+1
+	print(a,b)
+	print(a==b)			# why is ist 'False'? 
+	print(1==1.)		# int  and float have different values
+						# int is an exact value whereas float is an approximation
+						# dependent on the machine resolution (in bits)
+	print(a-int(b))		# help(int) '(...)			
+						# Convert a number or string to an integer, or return 0 if no arguments
+						# are given. (...)
+						# For floating point numbers, this truncates towards zero.(...)'					
+	print(int(1.1))
+	print int(1.999))	# 'int' trunctates - it does not round!
+	
+	# complex numbers:
+	c=complex(1) + (-1)**1/2
+	print(c, type(c))	# note: the imaginary part is written with 'j' insted of 'i'
+	print()
+	#	CHARACTERS AND STRINGS
+	print('STRINGS')
+	# to be continued...............................
+	
+	print('______________________________________________________________________________________feddich !')
+	sys.exit(0)
+	# ende Testumgebung
