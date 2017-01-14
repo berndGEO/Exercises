@@ -72,41 +72,17 @@ class Gen :
 #
 if  __name__ =='__main__':
 	print('START test run    _____________________________________________________________________________')
-	print()
+	print(' ')
 	
 	# 	1.	NUMBERS
 	print('NUMBERS')
-	print(type(1))		# realize that the type is of class 'int'
-	print(type(1.0))	# class 'float
-	#	1.1 Exercises.
-	print(5**5**5)		# a very big int number
-#	print(5.**5.**5.) 	# error: "unhandled OverflowError (34, 'Numerical result out of range')“	
-						# the pgm stops here therefore it's commented
-	print(5*5%10)		# '%' is a modulo perator! not a comment like in Matlab!
 
-	# testing the differences between int and float
-	a=2*300+1
-	b=2.*300+1
-	print(a,b)
-	print(a==b)			# why is ist 'False'? 
-	print(1==1.)		# int  and float have different values
-						# int is an exact value whereas float is an approximation
-						# dependent on the machine resolution (in bits)
-	print(a-int(b))		# help(int) '(...)			
-						# Convert a number or string to an integer, or return 0 if no arguments
-						# are given. (...)
-						# For floating point numbers, this truncates towards zero.(...)'					
-	print(int(1.1))
-	print int(1.999))	# 'int' trunctates - it does not round!
-	
-	# complex numbers:
-	c=complex(1) + (-1)**1/2
-	print(c, type(c))	# note: the imaginary part is written with 'j' insted of 'i'
-	print()
+
+	print(' ')
 	#	CHARACTERS AND STRINGS
-	print('STRINGS')
+	print('CHARACTERS AND STRINGS')
 	# to be continued...............................
 	
-	print('______________________________________________________________________________________feddich !')
+	print('______________________________________________________________________________________done !')
 	sys.exit(0)
-	# ende Testumgebung
+	# end of Test
